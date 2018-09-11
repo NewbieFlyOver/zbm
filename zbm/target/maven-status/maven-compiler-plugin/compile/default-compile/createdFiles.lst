@@ -1,0 +1,8 @@
+test\mybatis\entity\TeacherInfo.class
+test\mybatis\service\StuInfoService.class
+test\mybatis\App.class
+test\mybatis\service\StuInfoServiceImpl.class
+test\mybatis\controller\StuInfoController.class
+test\mybatis\dao\StuInfoMapper.class
+test\mybatis\dao\TeacherInfoMapper.class
+test\mybatis\entity\StuInfo.class

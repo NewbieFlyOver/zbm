@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <!-- **************************************  一对多：写法一 ******************************************************** -->
+<mapper namespace="wmq.fly.mybatis.dao.TeacherInfoMapper">
+  <resultMap id="BaseResultMap" type="wmq.fly.mybatis.entity.TeacherInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="teacherName" jdbcType="VARCHAR" property="teacherName" />
+    <result column="teacherNo" jdbcType="VARCHAR" property="teacherNo" />
+   <collection property="stuInfoList" ofType="wmq.fly.mybatis.entity.StuInfo" select="getStuInfo" column="id">
+   </collection> 
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, teacherName, teacherNo
+  </sql>
+ 
+ <select id="selectAllTeacherInfo" resultMap="BaseResultMap">
+ 	select 
+ 	<include refid="Base_Column_List"/>
+ 	from teacher_info
+ </select>
+ 
+ <select id="getStuInfo" parameterType="java.lang.Integer" resultType="wmq.fly.mybatis.entity.StuInfo">
+ 	select * from stu_info where teacherId= #{id}
+ </select>
+ 
+ <!-- **************************************  一对多：写法二 ******************************************************** -->
+ <resultMap id="BaseResultMap_01" type="wmq.fly.mybatis.entity.TeacherInfo">
+    <id column="tid" jdbcType="INTEGER" property="id" />
+    <result column="teacherName" jdbcType="VARCHAR" property="teacherName" />
+    <result column="teacherNo" jdbcType="VARCHAR" property="teacherNo" />
+   <collection property="stuInfoList" ofType="wmq.fly.mybatis.entity.StuInfo" column="tid">
+	    <result column="stuName" jdbcType="VARCHAR" property="stuName" />
+	    <result column="stuNo" jdbcType="VARCHAR" property="stuNo" />
+   </collection> 
+  </resultMap>
+ 
+ <select id="selectAllTeacherInfo01" resultMap="BaseResultMap_01">
+ 	select ti.id as tid, si.*,ti.* from stu_info si, teacher_info ti where  si.teacherId = ti.id 
+ </select>
+
+</mapper>

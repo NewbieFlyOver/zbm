@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- **************************************  多对一：写法一 ******************************************************** -->
+<mapper namespace="wmq.fly.mybatis.dao.StuInfoMapper">
+  <resultMap id="BaseResultMap" type="wmq.fly.mybatis.entity.StuInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="teacherId" jdbcType="INTEGER" property="teacherId" />
+    <result column="stuName" jdbcType="VARCHAR" property="stuName" />
+    <result column="stuNo" jdbcType="VARCHAR" property="stuNo" />
+    <result column="stuGender" jdbcType="VARCHAR" property="stuGender" />
+    <!-- 在这里不可以控制返回哪些字段的值，但是可以在sql语句里控制返回哪些字段的值 -->
+    <association property="teacherInfo" column="teacherId" javaType="wmq.fly.mybatis.entity.TeacherInfo" select="getTeacherInfo"/>
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, teacherId, stuName, stuNo
+  </sql>
+ <select id="selectAllStuInfo" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from stu_info
+  </select> 
+  
+  <select id="getTeacherInfo" resultType="wmq.fly.mybatis.entity.TeacherInfo" parameterType="java.lang.Integer">
+  	select id, teacherName, teacherNo from teacher_info where id= #{teacherId}
+  </select>
+  
+<!-- **************************************  多对一：写法二 ******************************************************** -->
+  <resultMap id="BaseResultMap_01" type="wmq.fly.mybatis.entity.StuInfo">
+    <id column="sid" jdbcType="INTEGER" property="id" />
+    <result column="teacherId" jdbcType="INTEGER" property="teacherId" />
+    <result column="stuName" jdbcType="VARCHAR" property="stuName" />
+    <result column="stuNo" jdbcType="VARCHAR" property="stuNo" />
+    <result column="stuGender" jdbcType="VARCHAR" property="stuGender" />
+    <association property="teacherInfo" javaType="wmq.fly.mybatis.entity.TeacherInfo">
+    <!-- 在这里可以控制返回哪些字段的值 -->
+	     <id column="tid" jdbcType="INTEGER" property="id" />
+	   	 <result column="teacherName" jdbcType="VARCHAR" property="teacherName" />
+	   	 <result column="teacherNo" jdbcType="VARCHAR" property="teacherNo" />
+    </association>
+  </resultMap>
+  
+ <select id="selectAllStuInfo01" resultMap="BaseResultMap_01">
+  	select ti.id as tid, ti.*,si.id as sid,si.* from teacher_info ti, stu_info si  where si.teacherId = ti.id
+  </select> 
+  
+<!-- **************************************  鉴别器 ******************************************************** -->
+   <resultMap id="BaseResultMap02" type="wmq.fly.mybatis.entity.StuInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="teacherId" jdbcType="INTEGER" property="teacherId" />
+    <result column="stuName" jdbcType="VARCHAR" property="stuName" />
+    <result column="stuNo" jdbcType="VARCHAR" property="stuNo" />
+    <result column="stuGender" jdbcType="VARCHAR" property="stuGender" />
+    <discriminator javaType="java.lang.Integer" column="stuGender">
+    	<case value="1" resultType="wmq.fly.mybatis.entity.FStuInfo"></case>
+    	 <case value="2" resultMap="stuInfoM"></case>
+    </discriminator>
+  </resultMap>
+  
+  <resultMap id="stuInfoF" type="wmq.fly.mybatis.entity.FStuInfo" extends="BaseResultMap02">
+  	<result column="age" property="age"/>
+  </resultMap>
+  
+  <resultMap id="stuInfoM" type="wmq.fly.mybatis.entity.MStuInfo" extends="BaseResultMap">
+  	<collection property="addr" column="id" select="wmq.fly.mybatis.dao.StuInfoMapper.selectAddrById"></collection>
+  </resultMap>
+  
+  <select id="selectAllStuInfo02" resultMap="BaseResultMap02">
+  	select * from stu_info where id =3
+  </select>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- ##################################################################################################### -->
+  <insert id="insetStuInfo" parameterType="wmq.fly.mybatis.entity.StuInfo" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+  	insert stu_info(teacherId,stuName,stuNo,stuGender) values(#{teacherId},#{stuName},#{stuNo},#{stuGender})
+  </insert>
+  
+  
+  
+</mapper>

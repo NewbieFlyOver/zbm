@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="wmq.fly.mybatis.dao.StuInfoMapper">
+  <!-- <resultMap id="BaseResultMap00" type="wmq.fly.mybatis.entity.MStuInfo">
+    <result column="addr" jdbcType="VARCHAR" property="addr" />
+  </resultMap> -->
+  
+
+    
+  <select id="selectAddrById" parameterType="java.lang.Integer" resultType="java.lang.String">
+  	select addr from stu_info where id = #{id}
+  </select>
+  
+  
+</mapper>
