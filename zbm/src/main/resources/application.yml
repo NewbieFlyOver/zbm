@@ -8,6 +8,20 @@ spring:
     username: root
     password: 123456
     
+########################################################
+###connect redis info redis配置信息
+########################################################    
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 2
+    timeout: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
+    
 #公共配置与profiles选择无关
 #公共配置与profiles选择无关
 mybatis:

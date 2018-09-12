@@ -82,6 +82,10 @@
   	insert stu_info(teacherId,stuName,stuNo,stuGender) values(#{teacherId},#{stuName},#{stuNo},#{stuGender})
   </insert>
   
-  
+  <select id="selectStuInfoById" parameterType="wmq.fly.mybatis.entity.StuInfo" resultMap="BaseResultMap">
+  	select 
+	<include refid="Base_Column_List"/>
+	from stu_info where id =#{id}
+  </select>
   
 </mapper>
