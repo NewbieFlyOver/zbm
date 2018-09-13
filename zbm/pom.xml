@@ -39,6 +39,12 @@
 			<artifactId>mybatis-spring-boot-starter</artifactId>
 			<version>1.1.1</version>
 		</dependency>
+		<!-- 引入单元测试依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
 		<!-- 引入lombok依赖 -->
 		<dependency>
 	        <groupId>org.projectlombok</groupId>

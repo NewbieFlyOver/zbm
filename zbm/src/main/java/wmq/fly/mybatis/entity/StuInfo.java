@@ -18,20 +18,20 @@ public class StuInfo {
 
     private Integer teacherId;
 
-    @Length(min=1,max=3,message="姓名长度应为1~3个字")
-    @Pattern(regexp="[0-9]",message="应为中文名")
-    @NotBlank(message="用户名不能为空")
+   // @Length(min=1,max=3,message="姓名长度应为1~3个字")
+   // @Pattern(regexp="[0-9]",message="应为中文名")
+   // @NotBlank(message="用户名不能为空")
     private String stuName;
 
     //@NotEmpty(message="stuNo不能为空")
     private String stuNo;
     
-    @CheckCase(value = CaseMode.LOWER,message = "nickName必须是小写")
+    //@CheckCase(value = CaseMode.LOWER,message = "nickName必须是小写")
     private String nickName;
     
     private int stuGender;
     
-    @Valid
+   // @Valid
     private TeacherInfo teacherInfo;
     
     private List<StuInfo> stuInfoMList;

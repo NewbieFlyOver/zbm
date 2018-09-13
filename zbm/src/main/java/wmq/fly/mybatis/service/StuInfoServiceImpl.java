@@ -26,6 +26,12 @@ public class StuInfoServiceImpl implements StuInfoService {
 		return stuInfoMapper.selectAllStuInfo01();
 	}
 	public Object getAllStuInfo02() {
-			return stuInfoMapper.selectAllStuInfo02();
-		}
+		return stuInfoMapper.selectAllStuInfo02();
+	}
+	
+	public Object getStuInfoById(StuInfo stuInfo) {
+		return stuInfoMapper.selectStuInfoById(stuInfo);
+	}
+	
+	
 }

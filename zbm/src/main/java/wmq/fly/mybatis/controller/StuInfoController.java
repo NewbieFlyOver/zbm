@@ -47,6 +47,7 @@ public class StuInfoController {
 	
 	@RequestMapping(value = "/stuInfo/getAllStuInfo01")
 	public Object getAllStuInfo01() {
+		System.out.println("11111");
 		return stuInfoService.getAllStuInfo01();
 	}
 	@RequestMapping(value = "/stuInfo/getAllStuInfo02")

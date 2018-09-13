@@ -19,4 +19,5 @@ public interface StuInfoMapper {
     int insetStuInfo(StuInfo stuInfo);
     
     StuInfo selectStuInfoById(StuInfo stuInfo);
+    
 }
