@@ -10,7 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.mock.web.MockHttpSession;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.transaction.TransactionConfiguration;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
@@ -25,6 +29,15 @@ import wmq.fly.mybatis.entity.StuInfo;
  * Controller层的单元测试
  *  参考博客：https://blog.csdn.net/sz85850597/article/details/80427408
  */
+
+/*
+ * 在ssm中的：
+ * @RunWith(SpringJUnit4ClassRunner.class)
+@WebAppConfiguration
+@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+@TransactionConfiguration(defaultRollback = true)
+@Transactional
+*/
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
