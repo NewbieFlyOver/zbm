@@ -60,6 +60,11 @@
 	        <artifactId>lombok</artifactId>
 	        <version>1.16.18</version>
     	</dependency>
+    	<!-- 引入solr依赖 -->
+    	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-solr</artifactId>
+		</dependency>
 
 	</dependencies>
   <build>

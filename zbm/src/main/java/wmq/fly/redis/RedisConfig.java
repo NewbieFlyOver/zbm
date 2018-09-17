@@ -106,7 +106,7 @@ public class RedisConfig extends CachingConfigurerSupport{
         //设置序列化工具，这样ReportBean不需要实现Serializable接口
         setSerializer(template); 
         template.afterPropertiesSet();
-        System.out.println("Bean  redisTemplate");
+       // System.out.println("Bean  redisTemplate");
         return template;
     }
     //设置序列化工具，这样ReportBean不需要实现Serializable接口
