@@ -98,4 +98,6 @@ public class StuInfoTestController {
     	.andExpect(MockMvcResultMatchers.status().isOk())
     	.andDo(MockMvcResultHandlers.print());
     }
+    
+  
 }

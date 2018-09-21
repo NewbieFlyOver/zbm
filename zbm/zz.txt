@@ -11,3 +11,24 @@
  	利用反射动态对方法进行排序
 	
 	
+自定义banner:
+	在线生成banner：	http://patorjk.com/software/taag 
+				   或 http://www.bootschool.net/ascii
+	将生成的banner图形复制到resources下的banner.txt（没有就新建）中
+	
+此句话用于事务回滚：	
+TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();//事务回滚	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

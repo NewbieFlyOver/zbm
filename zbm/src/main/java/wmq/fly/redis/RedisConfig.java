@@ -71,7 +71,6 @@ public class RedisConfig extends CachingConfigurerSupport{
                 for (Object obj : params) {
                     sb.append(obj.toString());
                 }
-                System.out.println("key+++++=="+sb.toString());
                 return sb.toString();
             }
         };

@@ -2,6 +2,7 @@ package wmq.fly.redis;
 
 import static org.junit.Assert.*;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -101,15 +102,15 @@ public class StuInfoRedisControllerTest {
 	@Test
 	public void getRedisZset() {
 		ZSetOperations opsForZSet = redisTemplate.opsForZSet();
-		Set range = opsForZSet.range("zst", 0, 10);
-		Iterator iterator = range.iterator();
+		Set set = opsForZSet.range("zst", 0, 10);
+		Iterator iterator = set.iterator();
 		while(iterator.hasNext()) {
 			Object next = iterator.next();
 			System.out.println(next);
 		}
 	}
 	
-//*********************  hash：有序  ********************		
+//*********************  hash  ********************		
 	@Test
 	public void setReidsHash() {
 		HashOperations opsForHash = redisTemplate.opsForHash();
@@ -121,13 +122,28 @@ public class StuInfoRedisControllerTest {
 	@Test
 	public void getReidsHash() {
 		HashOperations opsForHash = redisTemplate.opsForHash();
-	    Map map = opsForHash.entries("hash");
-	    
+	    Map<String, String> map = opsForHash.entries("hash");
+	    //第一种方式遍历map
 	    Iterator<Map.Entry<String, String>> it = map.entrySet().iterator();
 	    while (it.hasNext()) {
 	    	Entry<String, String> entry = it.next();
 	    	System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
 	     }
+	    System.out.println("*************************************************");
+	    //第二种方式遍历map，推荐，尤其是容量大时
+	    for (Map.Entry<String, String> entry : map.entrySet()) {
+	    	           //Map.entry<Integer,String> 映射项（键-值对）  有几个方法：用上面的名字entry
+	                 //entry.getKey() ;entry.getValue(); entry.setValue();
+	    	             //map.entrySet()  返回此映射中包含的映射关系的 Set视图。
+	    	            System.out.println("key= " + entry.getKey() + " and value= "
+	    	                     + entry.getValue());
+	    }
 	}
 	
+	@Test
+	public void bigDecimal() {
+		BigDecimal bd = new BigDecimal(10);
+		int num = Integer.valueOf(bd.toString());
+		System.out.println(num);
+	}
 }
