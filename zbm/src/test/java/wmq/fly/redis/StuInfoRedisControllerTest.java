@@ -130,6 +130,7 @@ public class StuInfoRedisControllerTest {
 	    	System.out.println("key= " + entry.getKey() + " and value= " + entry.getValue());
 	     }
 	    System.out.println("*************************************************");
+	    
 	    //第二种方式遍历map，推荐，尤其是容量大时
 	    for (Map.Entry<String, String> entry : map.entrySet()) {
 	    	           //Map.entry<Integer,String> 映射项（键-值对）  有几个方法：用上面的名字entry
