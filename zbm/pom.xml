@@ -78,6 +78,13 @@
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.7.0</version>
 		</dependency>
+		<!-- springfox-staticdocs 生成静态文档 -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-staticdocs</artifactId>
+			<version>2.2.2</version>
+			<scope>test</scope>
+		</dependency>
 
 
 	</dependencies>
