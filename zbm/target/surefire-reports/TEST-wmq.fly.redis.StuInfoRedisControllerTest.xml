@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="wmq.fly.redis.StuInfoRedisControllerTest" time="10.332" tests="12" errors="10" skipped="0" failures="1">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\bin"/>
+    <property name="java.vm.version" value="25.101-b13"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:/ww/workSpace/zbm/zbm"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="C:\ww\workSpace\zbm\zbm"/>
+    <property name="java.runtime.version" value="1.8.0_101-b13"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\wkq77\AppData\Local\Temp\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="classworlds.conf" value="C:/ww/localRepository/apache-maven-3.3.9/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\wkq77\bin;C:\ww\anzhuang\Git\mingw32\bin;C:\ww\anzhuang\Git\usr\local\bin;C:\ww\anzhuang\Git\usr\bin;C:\ww\anzhuang\Git\usr\bin;C:\ww\anzhuang\Git\mingw32\bin;C:\ww\anzhuang\Git\usr\bin;C:\Users\wkq77\bin;C:\ww\anzhuang\app\oracle\product\11.2.0\server\bin;C:\Python27;C:\Python27\Scripts;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\Program Files\Java\jdk1.8.0_101\bin;C:\Users\wkq77\AppData\Local\Android\Sdk\platform-tools;C:\Users\wkq77\AppData\Local\Android\Sdk\tools;C:\Users\wkq77\AppData\Local\Programs\Python\Python35;C:\Users\wkq77\AppData\Local\Programs\Python\Python35\Scripts;C:\Users\wkq77\AppData\Local\Android\Sdk\ndk-bundle;C:\Program Files\VisualSVN Server\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\Tools\Binn;C:\Program Files\Microsoft SQL Server\130\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio;C:\Program Files (x86)\Skype\Phone;C:\Program Files\dotnet;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\Microsoft VS Code\bin;C:\Program Files\MySQL\MySQL Utilities 1.6;C:\ww\localRepository\apache-maven-3.3.9\bin;C:\ww\anzhuang\Git\cmd;C:\Users\wkq77\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\Microsoft VS Code\bin;C:\AppServ\Apache24\bin;C:\AppServ\php5;C:\AppServ\MySQL\bin;C:\Users\wkq77\AppData\Local\Programs\Fiddler;%USERPROFILE%\AppData\Local\Microsoft\WindowsApps;C:\ww\anzhuang\Git\usr\bin\vendor_perl;C:\ww\anzhuang\Git\usr\bin\core_perl;."/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\wkq77"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="user.name" value="catfish"/>
+    <property name="java.class.path" value="C:/ww/localRepository/apache-maven-3.3.9/boot/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_101\jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean test"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_101"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_101\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_101\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_101\jre\classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="C:\ww\localRepository\apache-maven-3.3.9"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase name="setReidsHash" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.104">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultHashOperations.put(DefaultHashOperations.java:170)
+	at wmq.fly.redis.StuInfoRedisControllerTest.setReidsHash(StuInfoRedisControllerTest.java:117)
+</error>
+    <system-out><![CDATA[21:44:43.679 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:43.703 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:44:43.713 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:44:43.737 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [wmq.fly.redis.StuInfoRedisControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:44:43.764 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [wmq.fly.redis.StuInfoRedisControllerTest], using SpringBootContextLoader
+21:44:43.769 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.redis.StuInfoRedisControllerTest]: class path resource [wmq/fly/redis/StuInfoRedisControllerTest-context.xml] does not exist
+21:44:43.770 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.redis.StuInfoRedisControllerTest]: class path resource [wmq/fly/redis/StuInfoRedisControllerTestContext.groovy] does not exist
+21:44:43.770 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [wmq.fly.redis.StuInfoRedisControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:44:43.772 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [wmq.fly.redis.StuInfoRedisControllerTest]: StuInfoRedisControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:44:43.848 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:43.861 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+21:44:43.864 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+21:44:43.865 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+21:44:43.881 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [wmq/fly/redis/] to resources [URL [file:/C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/redis/], URL [file:/C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/redis/]]
+21:44:43.881 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\redis]
+21:44:43.881 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\redis] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/redis/*.class]
+21:44:43.885 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis]
+21:44:43.886 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/redis/*.class]
+21:44:43.888 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:wmq/fly/redis/*.class] to resources [file [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\redis\StuInfoRedisControllerTest.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\RedisConfig$1.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\RedisConfig.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\RedisKeyPrefix.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\RedisUtils.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\StuInfo.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\StuInfoRedisController.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\StuInfoRedisService.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\redis\StuInfoRedisServiceImpl.class]]
+21:44:43.971 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [wmq/fly/] to resources [URL [file:/C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/], URL [file:/C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/]]
+21:44:43.972 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly]
+21:44:43.972 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/*.class]
+21:44:43.974 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly]
+21:44:43.975 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/*.class]
+21:44:43.983 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:wmq/fly/*.class] to resources [file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\App.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\TomcatApplication.class]]
+21:44:44.032 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\TomcatApplication.class]
+21:44:44.035 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration wmq.fly.TomcatApplication for test class wmq.fly.redis.StuInfoRedisControllerTest
+21:44:44.039 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [wmq.fly.redis.StuInfoRedisControllerTest]: using defaults.
+21:44:44.046 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:44:44.082 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@19d37183, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1a0dcaa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3bd40a57, org.springframework.test.context.support.DirtiesContextTestExecutionListener@fdefd3f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@d83da2e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@a4102b8, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@11dc3715, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@69930714, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7a52f2a2, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@78047b92, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@8909f18, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@79ca92b9]
+21:44:44.087 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class wmq.fly.swagger.SwaggerStaticDocTest]
+21:44:44.087 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:44:44.088 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:44:44.090 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [wmq.fly.swagger.SwaggerStaticDocTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:44:44.091 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [wmq.fly.swagger.SwaggerStaticDocTest], using SpringBootContextLoader
+21:44:44.091 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.swagger.SwaggerStaticDocTest]: class path resource [wmq/fly/swagger/SwaggerStaticDocTest-context.xml] does not exist
+21:44:44.102 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.swagger.SwaggerStaticDocTest]: class path resource [wmq/fly/swagger/SwaggerStaticDocTestContext.groovy] does not exist
+21:44:44.102 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [wmq.fly.swagger.SwaggerStaticDocTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:44:44.103 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [wmq.fly.swagger.SwaggerStaticDocTest]: SwaggerStaticDocTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:44:44.127 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [wmq.fly.swagger.SwaggerStaticDocTest]
+21:44:44.128 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+21:44:44.128 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+21:44:44.128 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+21:44:44.129 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [wmq/fly/swagger/] to resources [URL [file:/C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/swagger/], URL [file:/C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/swagger/]]
+21:44:44.130 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\swagger]
+21:44:44.130 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\swagger] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/swagger/*.class]
+21:44:44.132 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger]
+21:44:44.132 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/swagger/*.class]
+21:44:44.134 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:wmq/fly/swagger/*.class] to resources [file [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\swagger\SwaggerControllerTest.class], file [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly\swagger\SwaggerStaticDocTest.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger\SwaggerConfig.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger\SwaggerController.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger\User.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\swagger\UserController.class]]
+21:44:44.165 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved classpath location [wmq/fly/] to resources [URL [file:/C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/], URL [file:/C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/]]
+21:44:44.166 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly]
+21:44:44.166 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\test-classes\wmq\fly] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/test-classes/wmq/fly/*.class]
+21:44:44.170 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Looking for matching resources in directory tree [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly]
+21:44:44.171 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Searching directory [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly] for files matching pattern [C:/ww/workSpace/zbm/zbm/target/classes/wmq/fly/*.class]
+21:44:44.173 [main] DEBUG org.springframework.core.io.support.PathMatchingResourcePatternResolver - Resolved location pattern [classpath*:wmq/fly/*.class] to resources [file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\App.class], file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\TomcatApplication.class]]
+21:44:44.181 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\ww\workSpace\zbm\zbm\target\classes\wmq\fly\TomcatApplication.class]
+21:44:44.181 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration wmq.fly.TomcatApplication for test class wmq.fly.swagger.SwaggerStaticDocTest
+21:44:44.184 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [wmq.fly.swagger.SwaggerStaticDocTest]: using defaults.
+21:44:44.191 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:44:44.204 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3ba9ad43, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@49d904ec, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48e4374, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3d680b5a, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b5d6a01, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4a22f9e2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3c419631, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@418e7838, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@61230f6a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3c130745, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@cd3fee8, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3e2e18f2]
+21:44:44.208 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.212 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.216 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [wmq.fly.swagger.SwaggerStaticDocTest]
+21:44:44.217 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [wmq.fly.swagger.SwaggerStaticDocTest]
+21:44:44.220 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.221 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+21:44:44.221 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+21:44:44.221 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [wmq.fly.redis.StuInfoRedisControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+21:44:44.222 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [wmq.fly.redis.StuInfoRedisControllerTest], using SpringBootContextLoader
+21:44:44.222 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.redis.StuInfoRedisControllerTest]: class path resource [wmq/fly/redis/StuInfoRedisControllerTest-context.xml] does not exist
+21:44:44.223 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [wmq.fly.redis.StuInfoRedisControllerTest]: class path resource [wmq/fly/redis/StuInfoRedisControllerTestContext.groovy] does not exist
+21:44:44.223 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [wmq.fly.redis.StuInfoRedisControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+21:44:44.223 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [wmq.fly.redis.StuInfoRedisControllerTest]: StuInfoRedisControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+21:44:44.242 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.245 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+21:44:44.245 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+21:44:44.246 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+21:44:44.246 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration wmq.fly.TomcatApplication for test class wmq.fly.redis.StuInfoRedisControllerTest
+21:44:44.246 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [wmq.fly.redis.StuInfoRedisControllerTest]: using defaults.
+21:44:44.251 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+21:44:44.256 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@795cd85e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@59fd97a8, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@f5ac9e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@123ef382, org.springframework.test.context.transaction.TransactionalTestExecutionListener@dbf57b3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@384ad17b, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@61862a7f, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@441772e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7334aada, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1d9b7cce, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4d9e68d0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@42e99e4a]
+21:44:44.256 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.256 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.257 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.257 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.265 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3bb9a3ff testClass = StuInfoRedisControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@661972b0 testClass = StuInfoRedisControllerTest, locations = '{}', classes = '{class wmq.fly.TomcatApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.SpringBootTestContextCustomizer@80503, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@86be70a, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@7d70d1b1, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@e874448], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]]], class annotated with @DirtiesContext [false] with mode [null].
+21:44:44.265 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.265 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [wmq.fly.redis.StuInfoRedisControllerTest]
+21:44:44.412 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemProperties] PropertySource with lowest search precedence
+21:44:44.413 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [systemEnvironment] PropertySource with lowest search precedence
+21:44:44.413 [main] DEBUG org.springframework.core.env.StandardEnvironment - Initialized StandardEnvironment with PropertySources [systemProperties,systemEnvironment]
+21:44:44.414 [main] DEBUG org.springframework.core.env.MutablePropertySources - Adding [inline] PropertySource with highest search precedence
+21:44:44.422 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+21:44:44.422 [main] DEBUG org.springframework.core.env.StandardEnvironment - Adding [Inlined Test Properties] PropertySource with highest search precedence
+                      __,,,,_
+       _ __..-;''`--/'/ /.',-`-.
+   (`/' ` |  \ \ \\ / / / / .-'/`,_
+  /'`\ \   |  \ | \| // // / -.,/_,'-,
+ /<7' ;  \ \  | ; ||/ /| | \/    |`-/,/-.,_,/')
+/  _.-, `,-\,__|  _-| / \ \/|_/  |    '-/.;.\'
+`-`  f/ ;      / __/ \__ `/ |__/ |
+     `-'      |  -| =|\_  \  |-' |
+           __/   /_..-' `  ),'  //
+       fL ((__.-'((___..-'' \__.'
+       
+2018-10-08 21:44:45.119  INFO 10592 --- [           main] w.fly.redis.StuInfoRedisControllerTest   : Starting StuInfoRedisControllerTest on DESKTOP-C7BB1LL with PID 10592 (started by catfish in C:\ww\workSpace\zbm\zbm)
+2018-10-08 21:44:45.122  INFO 10592 --- [           main] w.fly.redis.StuInfoRedisControllerTest   : No active profile set, falling back to default profiles: default
+2018-10-08 21:44:45.178  INFO 10592 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@62833051: startup date [Mon Oct 08 21:44:45 CST 2018]; root of context hierarchy
+2018-10-08 21:44:46.867  INFO 10592 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-08 21:44:46.970  INFO 10592 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2018-10-08 21:44:47.855  INFO 10592 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'redisConfig' of type [wmq.fly.redis.RedisConfig$$EnhancerBySpringCGLIB$$52a20d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-08 21:44:47.867  INFO 10592 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c156776f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-08 21:44:47.908  INFO 10592 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cache.annotation.ProxyCachingConfiguration' of type [org.springframework.cache.annotation.ProxyCachingConfiguration$$EnhancerBySpringCGLIB$$a68ad8d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2018-10-08 21:44:49.563  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/test/stuInfo/insertStuInfo]}" onto public java.lang.Object wmq.fly.junit.StuInfoJunitController.insertStuInfo(wmq.fly.mybatis.entity.StuInfo)
+2018-10-08 21:44:49.565  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfo/getAllStuInfo02]}" onto public java.lang.Object wmq.fly.mybatis.controller.StuInfoController.getAllStuInfo02()
+2018-10-08 21:44:49.566  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfo/insertStuInfo]}" onto public java.lang.Object wmq.fly.mybatis.controller.StuInfoController.insertStuInfo(wmq.fly.mybatis.entity.StuInfo,org.springframework.validation.BindingResult)
+2018-10-08 21:44:49.566  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfo/getAllStuInfo01]}" onto public java.lang.Object wmq.fly.mybatis.controller.StuInfoController.getAllStuInfo01()
+2018-10-08 21:44:49.566  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfo/getAllStuInfoA]}" onto public java.lang.Object wmq.fly.mybatis.controller.StuInfoController.getAllStuInfoA()
+2018-10-08 21:44:49.566  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfo/getAllStuInfo]}" onto public java.lang.Object wmq.fly.mybatis.controller.StuInfoController.getAllStuInfo()
+2018-10-08 21:44:49.567  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teacherInfo/getAllTeacherInfo01]}" onto public java.lang.Object wmq.fly.mybatis.controller.TeacherInfoController.getAllTeacherInfo01()
+2018-10-08 21:44:49.567  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/teacherInfo/getAllTeacherInfo]}" onto public java.lang.Object wmq.fly.mybatis.controller.TeacherInfoController.getAllTeacherInfo()
+2018-10-08 21:44:49.567  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/stuInfoRedis/selectStuInfoById]}" onto wmq.fly.mybatis.entity.StuInfo wmq.fly.redis.StuInfoRedisController.selectStuInfoById(wmq.fly.mybatis.entity.StuInfo)
+2018-10-08 21:44:49.567  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger/test],methods=[GET]}" onto public java.lang.Object wmq.fly.swagger.SwaggerController.swaggerTest(java.lang.Integer,java.lang.String,java.lang.String)
+2018-10-08 21:44:49.571  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/getUser],methods=[GET],produces=[application/json]}" onto public wmq.fly.swagger.User wmq.fly.swagger.UserController.getUser(java.lang.String)
+2018-10-08 21:44:49.689  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/user/addUser],methods=[POST],consumes=[application/json],produces=[application/json]}" onto public wmq.fly.swagger.User wmq.fly.swagger.UserController.addUser(wmq.fly.swagger.User)
+2018-10-08 21:44:49.691  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/getParamenters]}" onto public void wmq.fly.utils.GetParamenters.getParamenters(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.io.UnsupportedEncodingException
+2018-10-08 21:44:49.692  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v2/api-docs],methods=[GET],produces=[application/json || application/hal+json]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)
+2018-10-08 21:44:49.695  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/security]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+2018-10-08 21:44:49.696  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources]}" onto org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+2018-10-08 21:44:49.696  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/swagger-resources/configuration/ui]}" onto org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+2018-10-08 21:44:49.702  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-10-08 21:44:49.702  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2018-10-08 21:44:50.825  INFO 10592 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@62833051: startup date [Mon Oct 08 21:44:45 CST 2018]; root of context hierarchy
+2018-10-08 21:44:50.960  INFO 10592 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-08 21:44:50.960  INFO 10592 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-08 21:44:51.056  INFO 10592 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2018-10-08 21:44:52.473  INFO 10592 --- [           main] o.s.c.support.DefaultLifecycleProcessor  : Starting beans in phase 2147483647
+2018-10-08 21:44:52.474  INFO 10592 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2018-10-08 21:44:52.512  INFO 10592 --- [           main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2018-10-08 21:44:52.540  INFO 10592 --- [           main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2018-10-08 21:44:52.743  INFO 10592 --- [           main] w.fly.redis.StuInfoRedisControllerTest   : Started StuInfoRedisControllerTest in 8.307 seconds (JVM running for 9.593)
+]]></system-out>
+  </testcase>
+  <testcase name="setRedisList" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.034">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultListOperations.rightPush(DefaultListOperations.java:184)
+	at wmq.fly.redis.StuInfoRedisControllerTest.setRedisList(StuInfoRedisControllerTest.java:61)
+</error>
+  </testcase>
+  <testcase name="setRedisZset" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.039">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultZSetOperations.add(DefaultZSetOperations.java:48)
+	at wmq.fly.redis.StuInfoRedisControllerTest.setRedisZset(StuInfoRedisControllerTest.java:97)
+</error>
+  </testcase>
+  <testcase name="bigDecimal" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="0.016"/>
+  <testcase name="setRedisString" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.021">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.set(DefaultValueOperations.java:182)
+	at wmq.fly.redis.StuInfoRedisControllerTest.setRedisString(StuInfoRedisControllerTest.java:45)
+</error>
+  </testcase>
+  <testcase name="test" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="0.01">
+    <failure message="Not yet implemented" type="java.lang.AssertionError">java.lang.AssertionError: Not yet implemented
+	at org.junit.Assert.fail(Assert.java:88)
+	at wmq.fly.redis.StuInfoRedisControllerTest.test(StuInfoRedisControllerTest.java:35)
+</failure>
+  </testcase>
+  <testcase name="setRedisSet" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.013">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultSetOperations.add(DefaultSetOperations.java:43)
+	at wmq.fly.redis.StuInfoRedisControllerTest.setRedisSet(StuInfoRedisControllerTest.java:76)
+</error>
+  </testcase>
+  <testcase name="getRedisSet" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.03">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultSetOperations.members(DefaultSetOperations.java:126)
+	at wmq.fly.redis.StuInfoRedisControllerTest.getRedisSet(StuInfoRedisControllerTest.java:84)
+</error>
+  </testcase>
+  <testcase name="getReidsHash" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.027">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultHashOperations.entries(DefaultHashOperations.java:220)
+	at wmq.fly.redis.StuInfoRedisControllerTest.getReidsHash(StuInfoRedisControllerTest.java:125)
+</error>
+  </testcase>
+  <testcase name="getRedisList" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.017">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultListOperations.range(DefaultListOperations.java:142)
+	at wmq.fly.redis.StuInfoRedisControllerTest.getRedisList(StuInfoRedisControllerTest.java:68)
+</error>
+  </testcase>
+  <testcase name="getRedisZset" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.011">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultZSetOperations.range(DefaultZSetOperations.java:98)
+	at wmq.fly.redis.StuInfoRedisControllerTest.getRedisZset(StuInfoRedisControllerTest.java:105)
+</error>
+  </testcase>
+  <testcase name="getRedisString" classname="wmq.fly.redis.StuInfoRedisControllerTest" time="1.01">
+    <error message="Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool" type="org.springframework.data.redis.RedisConnectionFailureException">org.springframework.data.redis.RedisConnectionFailureException: Cannot get Jedis connection; nested exception is redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:16)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.fetchJedisConnector(JedisConnectionFactory.java:194)
+	at org.springframework.data.redis.connection.jedis.JedisConnectionFactory.getConnection(JedisConnectionFactory.java:348)
+	at org.springframework.data.redis.core.RedisConnectionUtils.doGetConnection(RedisConnectionUtils.java:129)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:92)
+	at org.springframework.data.redis.core.RedisConnectionUtils.getConnection(RedisConnectionUtils.java:79)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:194)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:169)
+	at org.springframework.data.redis.core.AbstractOperations.execute(AbstractOperations.java:91)
+	at org.springframework.data.redis.core.DefaultValueOperations.get(DefaultValueOperations.java:43)
+	at wmq.fly.redis.StuInfoRedisControllerTest.getRedisString(StuInfoRedisControllerTest.java:51)
+</error>
+  </testcase>
+</testsuite>

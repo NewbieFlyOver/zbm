@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: wmq.fly.swagger.SwaggerStaticDocTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 3.784 sec <<< FAILURE! - in wmq.fly.swagger.SwaggerStaticDocTest
+TestApi(wmq.fly.swagger.SwaggerStaticDocTest)  Time elapsed: 0.556 sec  <<< ERROR!
+java.lang.NoSuchMethodError: org.apache.commons.lang3.StringUtils.isNoneBlank([Ljava/lang/CharSequence;)Z
+	at io.github.robwin.swagger2markup.builder.document.OverviewDocument.overview(OverviewDocument.java:149)
+	at io.github.robwin.swagger2markup.builder.document.OverviewDocument.build(OverviewDocument.java:76)
+	at io.github.robwin.swagger2markup.Swagger2MarkupConverter.buildDocuments(Swagger2MarkupConverter.java:118)
+	at io.github.robwin.swagger2markup.Swagger2MarkupConverter.intoFolder(Swagger2MarkupConverter.java:98)
+	at wmq.fly.swagger.SwaggerStaticDocTest.Test(SwaggerStaticDocTest.java:47)
+

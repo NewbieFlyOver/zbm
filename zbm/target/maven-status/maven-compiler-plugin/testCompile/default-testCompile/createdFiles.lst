@@ -1,0 +1,6 @@
+wmq\fly\junit\StuInfoSuits.class
+wmq\fly\redis\StuInfoRedisControllerTest.class
+wmq\fly\swagger\SwaggerControllerTest.class
+wmq\fly\junit\StuInfoTestController.class
+wmq\fly\swagger\SwaggerStaticDocTest.class
+wmq\fly\junit\StuInfoTestService.class
