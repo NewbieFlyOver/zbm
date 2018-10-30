@@ -103,43 +103,59 @@
 			<artifactId>springfox-staticdocs</artifactId>
 			<version>2.6.1</version>
 		</dependency>
-
-
+		<!-- 引入fastjson依赖 -->
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.1.43</version>
+		</dependency>
+				<!-- 引入dom4j依赖 -->
+		<dependency>
+			<groupId>org.dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>SwaggerOfflineDoc</finalName>
-		<plugins>            
-		<!--<plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
-				</plugin> -->           
-				 <!--Maven通过Maven Surefire Plugin插件执行单元测试 -->
+		<plugins>
+			<!--<plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+				</plugin> -->
+			<!--Maven通过Maven Surefire Plugin插件执行单元测试 -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>           
-			 <!-- Run the generated asciidoc through Asciidoctor to generate other documentation 
-				types, such as PDFs or HTML5 -->            
-				<!--通过Asciidoctor使得asciidoc生成其他的文档格式，例如：PDF 或者HTML5 -->
+			</plugin>
+			<!-- Run the generated asciidoc through Asciidoctor to generate other 
+				documentation types, such as PDFs or HTML5 -->
+			<!--通过Asciidoctor使得asciidoc生成其他的文档格式，例如：PDF 或者HTML5 -->
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>1.5.3</version>                
-				<!-- Include Asciidoctor PDF for pdf generation -->               
-				 <!--生成PDF -->
+				<version>1.5.3</version>
+				<!-- Include Asciidoctor PDF for pdf generation -->
+				<!--生成PDF -->
 				<dependencies>
 					<dependency>
 						<groupId>org.asciidoctor</groupId>
 						<artifactId>asciidoctorj-pdf</artifactId>
 						<version>1.5.0-alpha.14</version>
-					</dependency>                    
-					<!-- Comment this section to use the default jruby artifact provided by the 
-						plugin -->
+					</dependency>
+					<!-- Comment this section to use the default jruby artifact provided 
+						by the plugin -->
 					<dependency>
 						<groupId>org.jruby</groupId>
 						<artifactId>jruby-complete</artifactId>
 						<version>1.7.21</version>
 					</dependency>
-				</dependencies>                 
-				<!-- Configure generic document generation settings -->                
+				</dependencies>
+				<!-- Configure generic document generation settings -->
 				<!--文档生成配置 -->
 				<configuration>
 					<sourceDirectory>${asciidoctor.input.directory}</sourceDirectory>
@@ -154,12 +170,12 @@
 						<sectanchors></sectanchors>
 						<generated>${generated.asciidoc.directory}</generated>
 					</attributes>
-				</configuration>                
+				</configuration>
 				<!-- Since each execution can only handle one backend, run separate executions 
-					for each desired output type -->                
-					<!--因为每次执行只能处理一个后端，所以对于每个想要的输出类型，都是独立分开执行 -->
-				<executions>                    
-				<!--html5 -->
+					for each desired output type -->
+				<!--因为每次执行只能处理一个后端，所以对于每个想要的输出类型，都是独立分开执行 -->
+				<executions>
+					<!--html5 -->
 					<execution>
 						<id>output-html</id>
 						<phase>test</phase>
@@ -170,7 +186,7 @@
 							<backend>html5</backend>
 							<outputDirectory>${asciidoctor.html.output.directory}</outputDirectory>
 						</configuration>
-					</execution>                    
+					</execution>
 					<!--pdf -->
 					<execution>
 						<id>output-pdf</id>
