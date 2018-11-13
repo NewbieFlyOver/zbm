@@ -90,7 +90,7 @@ class CloneDemo implements Cloneable,Serializable {
 
 }
 
-public class Prototype {
+public class CreateTypePrototype {
 	public static void main(String[] args) throws CloneNotSupportedException, ClassNotFoundException, IOException {
 		
 		CloneDemo prototype = new CloneDemo("铁军",20);

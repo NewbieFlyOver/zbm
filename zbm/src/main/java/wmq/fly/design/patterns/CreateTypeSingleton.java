@@ -59,7 +59,7 @@ class SingletonHungry{
 	}
 }
 
-public class Singleton {
+public class CreateTypeSingleton {
 	public static void main(String[] args) {
 		SingletonLazy instance = SingletonLazy.getInstance();
 		System.out.println(instance.toString());

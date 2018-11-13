@@ -47,7 +47,7 @@ class SendSmsFactory implements Provider{
     }  
 }  
 
-public class FactoryMethod {
+public class CreateTypeFactoryMethod {
 
 	public static void main(String[] args) {
 		Provider provider = new SendMailFactory();

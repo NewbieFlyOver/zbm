@@ -56,7 +56,7 @@ class StudentBuilder{
 }
 
 
-public class Builder {
+public class CreateTypeBuilder {
 	public static void main(String[] args) {
 		Student stu = new StudentBuilder().setAge(12).setGender("F").setName("小宁").build();
 		System.out.println(stu.toString());
