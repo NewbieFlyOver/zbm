@@ -127,6 +127,28 @@
 			<artifactId>netty</artifactId>
 			<version>3.3.0.Final</version>
 		</dependency>
+		<!-- 引入netty5.0 依赖,以下三个都是 -->
+		<!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+		<dependency>
+			<groupId>io.netty</groupId>
+			<artifactId>netty-all</artifactId>
+			<version>5.0.0.Alpha2</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling -->
+		<dependency>
+			<groupId>org.jboss.marshalling</groupId>
+			<artifactId>jboss-marshalling</artifactId>
+			<version>1.3.19.GA</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.jboss.marshalling/jboss-marshalling-serial -->
+		<dependency>
+			<groupId>org.jboss.marshalling</groupId>
+			<artifactId>jboss-marshalling-serial</artifactId>
+			<version>1.3.18.GA</version>
+			<scope>test</scope>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<finalName>SwaggerOfflineDoc</finalName>
