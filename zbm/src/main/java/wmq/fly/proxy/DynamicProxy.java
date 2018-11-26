@@ -66,12 +66,12 @@ public class DynamicProxy {
 	}
 	
 	public static void cjlibProxy() {
-		Cglib cglib = new Cglib();
+		/*Cglib cglib = new Cglib();
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(BMCar.class);
 		enhancer.setCallback(cglib);
 		CarInterface car = (CarInterface) enhancer.create();
-		car.say();
+		car.say();*/
 	}
 	
 	

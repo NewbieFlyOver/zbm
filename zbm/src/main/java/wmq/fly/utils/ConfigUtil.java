@@ -27,6 +27,7 @@ public class ConfigUtil {
 			synchronized (ConfigUtil.class) {
 				if (null == config) {
 					try {
+						//config.properties放在src文件下的
 						Resource resource = new ClassPathResource("config.properties");
 						config = PropertiesLoaderUtils.loadProperties(resource);
 					} catch (IOException e) {

@@ -1,0 +1,5 @@
+1. ImageAndVideoToMultipartFile:
+	1.1）图片与base64互转。
+	1.2）图片、视频及base64转为MultipartFile对象。
+	
+2. 视频格式转换，包含截图功能
