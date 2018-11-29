@@ -1,7 +1,9 @@
 package wmq.fly.utils;
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.List;
 
@@ -9,10 +11,14 @@ import java.util.List;
 
 /**
  *   视频格式转换，包含截图功能
- *  所用到ffmpeg.exe和mencoder.exe在
+ *   window上所用到ffmpeg.exe和mencoder.exe在
+ *   linux上安装ffmpeg和mencoder: 看本包下的Linux上安装说明 或 https://www.cnblogs.com/wpjamer/p/ffmpeg.html
  *  
  * ffmpeg常用参数： https://www.cnblogs.com/wainiwann/p/4128154.html
  * mencoder常用参数：https://www.cnblogs.com/zlp520/p/4450494.html
+ * 
+ *  扩展知识点：
+ *  1. Java进程Runtime、Process、ProcessBuilder调用外部程序，参考博客：https://blog.csdn.net/c315838651/article/details/72085739
  *
  */
 public class ConverVideo {
@@ -101,6 +107,7 @@ public class ConverVideo {
 		// 添加截取的图片的保存路径
 		commend.add(imageRealPath + filerealname + ".jpg");
 		try {
+			//ProcessBuilder类是J2SE 1.5在java.lang中新添加的一个新类，此类用于创建操作系统进程，它提供一种启动和管理进程（也就是应用程序）的方法
 			ProcessBuilder builder = new ProcessBuilder();
 			builder.command(commend);
 			builder.start();
@@ -328,6 +335,27 @@ public class ConverVideo {
 		return strDay + " " + strHour + ":" + strMinute + ":" + strSecond + " " + strMilliSecond;
 	}
 
+	/**
+	 *  使用ProcessBuilder查看ip地址【Windows系统下】
+	 */
+	public static void checkPhysicAddress() {
+	    ProcessBuilder processBuilder = new ProcessBuilder("ipconfig", "/all");
+	    try {
+	        Process process = processBuilder.start();
+	        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream(), "GBK"));
+	        String line;
+	        while ((line = br.readLine()) != null) {
+	            if (line.indexOf("IPv4") != -1) {
+	                System.out.println(line);
+	            }
+	        }
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	    }
+	}
+
+	
+	
 	public static void main(String[] args) {
 		String path = "C:\\upload\\1.mp4";
 		try {
@@ -336,7 +364,12 @@ public class ConverVideo {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		//使用ProcessBuilder查看ip地址【Windows系统下】
+		//checkPhysicAddress();
+		
 	}
+	
 	
 	
 }
