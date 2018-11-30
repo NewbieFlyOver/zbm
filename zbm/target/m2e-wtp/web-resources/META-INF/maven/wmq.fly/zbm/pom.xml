@@ -109,13 +109,13 @@
 			<artifactId>fastjson</artifactId>
 			<version>1.1.43</version>
 		</dependency>
-				<!-- 引入dom4j依赖 -->
+		<!-- 引入dom4j依赖 -->
 		<dependency>
 			<groupId>org.dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<version>2.0.0</version>
 		</dependency>
-<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
@@ -148,7 +148,29 @@
 			<version>1.3.18.GA</version>
 			<scope>test</scope>
 		</dependency>
-		
+
+		<!-- 引入Excel依赖 -->
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.15</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.15</version>
+		</dependency>
+
+		<!-- 引入freemarker依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-freemarker</artifactId>
+		</dependency>
+
+
 	</dependencies>
 	<build>
 		<finalName>SwaggerOfflineDoc</finalName>

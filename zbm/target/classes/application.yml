@@ -21,6 +21,26 @@ spring:
       max-wait: -1
       max-idle: 8
       min-idle: 0
+ 
+########################################################
+### freemarker配置信息
+########################################################  
+  freemarker:
+    request-context-attribute: request  #request访问request  页面获取方式： ${request.contextPath}
+    suffix: .html  #后缀名
+    content-type: text/html
+    enabled: true
+    cache: false #缓存配置
+     #！！！！src/main/java 和 src/main/resources 下的文件在编译后会放到WEB-INF/classes路径下，默认的classpath是在这里！！！所以这里要加上classpath
+    #template-loader-path: classpath:/templates
+    template-loader-path: /freemarkerDemo/ #模板加载路径 按需配置
+    charset: UTF-8 #编码格式
+    settings:
+      number_format: '0.##'   #数字格式化，无小数点
+ # 设置静态文件路径，js,css等
+  mvc:
+    static-path-pattern: /static/**
+    
 ########################################################
 ### solr配置信息
 ########################################################       
@@ -36,5 +56,5 @@ mybatis:
   
 server:
   port: 9999
-
-    
+  
+ 

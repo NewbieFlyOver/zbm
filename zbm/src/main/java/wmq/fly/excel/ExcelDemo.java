@@ -1,6 +1,7 @@
-package wmq.fly.mybatis.service;
+package wmq.fly.excel;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -8,53 +9,86 @@ import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.poi.hssf.usermodel.HSSFCell;
 import org.apache.poi.hssf.usermodel.HSSFCellStyle;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import wmq.fly.excel.Member;
-import wmq.fly.mybatis.dao.StuInfoMapper;
-import wmq.fly.mybatis.entity.StuInfo;
+/**
+ * excel表格的导入导出，包含浏览器下载
+ *
+ */
 
-@Service
-public class StuInfoServiceImpl implements StuInfoService {
-	@Autowired
-    private StuInfoMapper stuInfoMapper;
-	
-	public Object insertStuInfo(StuInfo stuInfo) {
-		stuInfoMapper.insetStuInfo(stuInfo);
-		return stuInfo.getId();
-	}
-	
-	public Object getAllStuInfo() {
-		return stuInfoMapper.selectAllStuInfo();
-	}
-	
-	public Object getAllStuInfo01() {
-		return stuInfoMapper.selectAllStuInfo01();
-	}
-	public Object getAllStuInfo02() {
-		return stuInfoMapper.selectAllStuInfo02();
-	}
-	
-	public Object getStuInfoById(StuInfo stuInfo) {
-		return stuInfoMapper.selectStuInfoById(stuInfo);
-	}
+public class ExcelDemo {
 
-	@Override
-	public Object writeExcel(HttpServletResponse response) {
+	/**
+	 *  导入Excel表格
+	 */
+	public static void readExcel(){
+		 //excel文件路径
+        String excelPath = "C:\\10月回访-许娜-.xls";
+        try {
+            //String encoding = "GBK";
+            File excel = new File(excelPath);
+            if (excel.isFile() && excel.exists()) {   //判断文件是否存在
+
+                String[] split = excel.getName().split("\\.");  //.是特殊字符，需要转义！！！！！
+                Workbook wb;
+                //根据文件后缀（xls/xlsx）进行判断
+                if ( "xls".equals(split[1])){
+                    FileInputStream fis = new FileInputStream(excel);   //文件流对象
+                    wb = new HSSFWorkbook(fis);
+                }else if ("xlsx".equals(split[1])){
+                    wb = new XSSFWorkbook(excel);
+                }else {
+                    System.out.println("文件类型错误!");
+                    return;
+                }
+
+                //开始解析
+                Sheet sheet = wb.getSheetAt(0);     //读取sheet 0
+
+                int firstRowIndex = sheet.getFirstRowNum()+1;   //第一行是列名，所以不读
+                int lastRowIndex = sheet.getLastRowNum();
+                System.out.println("firstRowIndex: "+firstRowIndex);
+                System.out.println("lastRowIndex: "+lastRowIndex);
+
+                for(int rIndex = firstRowIndex; rIndex <= lastRowIndex; rIndex++) {   //遍历行
+                    System.out.println("rIndex: " + rIndex);
+                    Row row = sheet.getRow(rIndex);
+                    if (row != null) {
+                        int firstCellIndex = row.getFirstCellNum();
+                        int lastCellIndex = row.getLastCellNum();
+                        for (int cIndex = firstCellIndex; cIndex < lastCellIndex; cIndex++) {   //遍历列
+                            Cell cell = row.getCell(cIndex);
+                            if (cell != null) {
+                                System.out.println(cell.toString());
+                            }
+                        }
+                    }
+                }
+            } else {
+                System.out.println("找不到指定的文件");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+	}
+	
+	/**
+	 *  导出excel表格
+	 * @throws ParseException
+	 */
+	static void writeExcel() throws ParseException {
 		 // 第一步，创建一个webbook，对应一个Excel文件  
         HSSFWorkbook wb = new HSSFWorkbook();  
         // 第二步，在webbook中添加一个sheet,对应Excel文件中的sheet  
@@ -82,18 +116,12 @@ public class StuInfoServiceImpl implements StuInfoService {
         List list = new ArrayList();  
         SimpleDateFormat df = new SimpleDateFormat("yyyy-mm-dd");  
   
-        Member user1;
-		try {
-			user1 = new Member(1, "熊大", 24, df.parse("1993-08-28"));
-			  Member user2 = new Member(2, "熊二", 23, df.parse("1994-08-19"));  
-		        Member user3 = new Member(3, "熊熊", 24, df.parse("1983-11-22"));  
-		        list.add(user1);  
-		        list.add(user2);  
-		        list.add(user3);  
-		} catch (ParseException e1) {
-			e1.printStackTrace();
-		}  
-      
+        Member user1 = new Member(1, "熊大", 24, df.parse("1993-08-28"));  
+        Member user2 = new Member(2, "熊二", 23, df.parse("1994-08-19"));  
+        Member user3 = new Member(3, "熊熊", 24, df.parse("1983-11-22"));  
+        list.add(user1);  
+        list.add(user2);  
+        list.add(user3);  
   
         for (int i = 0; i < list.size(); i++)  
         {  
@@ -108,7 +136,7 @@ public class StuInfoServiceImpl implements StuInfoService {
                     .getBirth()));  
         }  
         // 第六步，将文件存到指定位置  
-       /* try  
+        try  
         {  
         	 File file1 = new File("C:/upload/Members.xls");
              if(!file1.exists()){
@@ -121,10 +149,10 @@ public class StuInfoServiceImpl implements StuInfoService {
         catch (Exception e)  
         {  
             e.printStackTrace();  
-        } */
+        } 
         
-        
-        // 第六步，下载excel
+        /*
+        // 第六步，浏览器下载excel
         OutputStream out = null;  
         try {      
             out = response.getOutputStream();  
@@ -142,32 +170,22 @@ public class StuInfoServiceImpl implements StuInfoService {
                 e.printStackTrace();  
             }    
         }   
-        return "执行完毕！";
+        */
+        
 	}
-
-	@Override
-	public Object echart(HttpServletResponse response) {
-		String[] xText = {"数学","语文","英语","体育","自然"};
-		List<String> list = Arrays.asList(xText);
-		String[] xValue1 = {"80","85","76","90","92"};
-		List<String> list2 = Arrays.asList(xValue1);
-		
-		String[] xValue2 = {"90","82","79","99","93"};
-		List<String> list3 = Arrays.asList(xValue2);
-		
-		Map<String,List<String>> map = new HashMap<String,List<String>>();
-		map.put("xText", list);
-		map.put("xValue1", list2);
-		map.put("xValue2", list3);
-		return map;
-	}
-
-	@Override
-	public String freemarker(HttpServletRequest request, HttpServletResponse response) {
-		System.out.println("111111");
-		
-		return "freemarker";
+	
+	
+	
+	
+	
+	
+	public static void main(String[] args) throws ParseException {
+		//readExcel();
+		writeExcel();
 	}
 	
 	
 }
+
+
+
