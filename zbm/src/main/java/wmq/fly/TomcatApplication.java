@@ -4,6 +4,7 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -12,6 +13,8 @@ import org.springframework.stereotype.Component;
 import wmq.fly.eventListener.OneEventHandle;
 import wmq.fly.eventListener.SecondEvent;
 import wmq.fly.eventListener.SecondEventListener;
+import wmq.fly.multipleDataSource.atomikos.DBConfig.DBConfig1;
+import wmq.fly.multipleDataSource.atomikos.DBConfig.DBConfig2;
 
 /**
  * 既可以使用springboot内嵌的tomcat，也可以打成war包放在外部的tomcat中运行
@@ -37,6 +40,8 @@ import wmq.fly.eventListener.SecondEventListener;
 //@EnableScheduling  //开启定时器
 //@EnableCaching //开启redis的缓存
 @EnableAsync  //开启异步执行
+//读取springboot多数据源事务atomikos配置的文件信息
+@EnableConfigurationProperties(value = { DBConfig1.class, DBConfig2.class }) 
 public class TomcatApplication  extends SpringBootServletInitializer {
 	
 	public static void main(String[] args) {

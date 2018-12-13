@@ -10,7 +10,7 @@ import wmq.fly.multipleDataSource.test02.dao.UserMapper02;
 import wmq.fly.multipleDataSource.test02.service.UserService02;
 
 @Service
-@Transactional(propagation=Propagation.REQUIRED)
+@Transactional
 public class UserService01 {
 	
 	@Autowired

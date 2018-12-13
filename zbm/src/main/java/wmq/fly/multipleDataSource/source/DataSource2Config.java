@@ -13,8 +13,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
-@Configuration // 注册到springboot容器中
-@MapperScan(basePackages = "wmq.fly.multipleDataSource.test02.dao", sqlSessionFactoryRef = "test2SqlSessionFactory")
+//@Configuration // 注册到springboot容器中
+//@MapperScan(basePackages = "wmq.fly.multipleDataSource.test02.dao", sqlSessionFactoryRef = "test2SqlSessionFactory")
 public class DataSource2Config {
 
 	/**

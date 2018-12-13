@@ -3,23 +3,55 @@
 ########################################################
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3308/school?characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/school?characterEncoding=utf-8
     #url: jdbc:mysql://localhost:8066/test?characterEncoding=utf-8
     driver-class-name: com.mysql.jdbc.Driver
     username: root
-    password: 123456
+    password: 1234
     
      ###自定义数据源
-    test1: 
-      url: jdbc:mysql://localhost:3308/test01?useUnicode=true&characterEncoding=utf-8
+#    test1: 
+#      url: jdbc:mysql://localhost:3306/test01?useUnicode=true&characterEncoding=utf-8
+#      username: root
+#      password: 1234
+#      driver-class-name: com.mysql.jdbc.Driver
+#    test2: 
+#      url: jdbc:mysql://localhost:3306/test02?useUnicode=true&characterEncoding=utf-8
+#      username: root
+#      password: 1234
+#      driver-class-name: com.mysql.jdbc.Driver
+      
+########################################################
+###jta-atomikos数据源配置信息
+########################################################      
+# Mysql 1
+mysql: 
+  datasource:
+    test01:
+      url: jdbc:mysql://localhost:3306/test01?useUnicode=true&characterEncoding=utf-8
       username: root
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
-    test2: 
-      url: jdbc:mysql://localhost:3308/test02?useUnicode=true&characterEncoding=utf-8
+      password: 1234
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      testQuery: select 1
+# Mysql 2
+    test02:
+      url: jdbc:mysql://localhost:3306/test02?useUnicode=true&characterEncoding=utf-8
       username: root
-      password: 123456
-      driver-class-name: com.mysql.jdbc.Driver
+      password: 1234
+      minPoolSize: 3
+      maxPoolSize: 25
+      maxLifetime: 20000
+      borrowConnectionTimeout: 30
+      loginTimeout: 30
+      maintenanceInterval: 60
+      maxIdleTime: 60
+      testQuery: select 1 
     
 ########################################################
 ###connect redis info redis配置信息

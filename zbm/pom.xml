@@ -170,7 +170,11 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 
-
+		<!-- 引入jta-atomikos依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jta-atomikos</artifactId>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>SwaggerOfflineDoc</finalName>
