@@ -37,5 +37,13 @@
  <select id="selectAllTeacherInfo01" resultMap="BaseResultMap_01">
  	select ti.id as tid, si.*,ti.* from stu_info si, teacher_info ti where  si.teacherId = ti.id 
  </select>
+ 
+	 <insert id="insertTeacher" parameterType="wmq.fly.table.depots.QueryCondition" keyColumn="id" keyProperty="id" useGeneratedKeys="true">
+	 	insert ${tableName}(id,teacherName,teacherNo) values(#{id},#{teacherName},#{teacherNo})
+	 </insert>
 
+	<select id="selectByTeacherId" parameterType="wmq.fly.table.depots.QueryCondition" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"/> from ${tableName} where id = #{id}
+	</select>	
+	
 </mapper>

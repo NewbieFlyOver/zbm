@@ -20,4 +20,6 @@ public class TeacherInfoServiceImpl implements TeacherInfoService{
 	public Object getAllTeacherInfo01() {
 		return teacherInfoMapper.selectAllTeacherInfo01();
 	}
+	
+	
 }
