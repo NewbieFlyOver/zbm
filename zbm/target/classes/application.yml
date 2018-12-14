@@ -98,8 +98,21 @@ mysql:
 mybatis:
   typeAliasesPackage: wmq.fly.mybatis.entity
   mapperLocations: classpath:test/mybatis/mappers/*Mapper.xml 
-  
+ 
+########################################################
+###服务配置，如果配置了项目名，此时访问需要带上项目名
+########################################################   
 server:
+#端口号
   port: 9999
-  
+#项目名
+#  context-path: /wmq
+name: hello word
+
+########################################################
+###多环境配置
+########################################################    
+spring.profiles.active: pre
+ 
+ 
  

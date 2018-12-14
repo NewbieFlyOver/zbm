@@ -170,12 +170,17 @@
 			<artifactId>spring-boot-starter-freemarker</artifactId>
 		</dependency>
 
-		<!-- 引入jta-atomikos依赖 -->
+		<!-- 引入jta-atomikos依赖,springboot多数据源事务管理 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jta-atomikos</artifactId>
 		</dependency>
 		
+		<!-- 引入aop依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
 		
 	</dependencies>
 	<build>

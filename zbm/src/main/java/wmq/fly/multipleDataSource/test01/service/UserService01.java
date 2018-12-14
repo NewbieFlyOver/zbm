@@ -1,5 +1,6 @@
 package wmq.fly.multipleDataSource.test01.service;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +12,8 @@ import wmq.fly.multipleDataSource.test02.service.UserService02;
 @Service
 @Transactional
 public class UserService01 {
+	
+	private static Logger log = Logger.getLogger(UserService01.class);
 	
 	@Autowired
 	private UserMapper01 userMapper01;
