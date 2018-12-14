@@ -39,6 +39,7 @@ mysql:
       maintenanceInterval: 60
       maxIdleTime: 60
       testQuery: select 1
+
 # Mysql 2
     test02:
       url: jdbc:mysql://localhost:3308/test02?useUnicode=true&characterEncoding=utf-8
@@ -52,7 +53,15 @@ mysql:
       maintenanceInterval: 60
       maxIdleTime: 60
       testQuery: select 1 
-    
+
+########################################################
+### 打印mybatis运行的sql语句
+########################################################       
+logging: 
+  level:
+#wmq.fly为*Mapper.java接口所在的包  
+    wmq.fly: DEBUG
+              
 ########################################################
 ###connect redis info redis配置信息
 ########################################################    
