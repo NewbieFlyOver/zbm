@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 //@Configuration // 注册到springboot容器中
+//wmq.fly.multipleDataSource.test01.dao下的的*mapper.java使用test01数据源
 //@MapperScan(basePackages = "wmq.fly.multipleDataSource.test01.dao", sqlSessionFactoryRef = "test1SqlSessionFactory")
 public class DataSource1Config {
 

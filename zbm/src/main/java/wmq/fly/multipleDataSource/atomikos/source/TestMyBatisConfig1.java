@@ -20,10 +20,13 @@ import wmq.fly.multipleDataSource.atomikos.DBConfig.DBConfig1;
 
 @Configuration
 // basePackages 最好分开配置 如果放在同一个文件夹可能会报错
+//wmq.fly.multipleDataSource.test01.dao下的的*mapper.java使用test01数据源
 @MapperScan(basePackages = "wmq.fly.multipleDataSource.test01.dao", sqlSessionTemplateRef = "testSqlSessionTemplate")
 public class TestMyBatisConfig1 {
 
-	// 配置数据源
+	/*
+	 * 配置test01数据库
+	 */
 	@Primary
 	@Bean(name = "testDataSource")
 	public DataSource testDataSource(DBConfig1 testConfig) throws SQLException {
@@ -49,6 +52,9 @@ public class TestMyBatisConfig1 {
 		return xaDataSource;
 	}
 
+	/*
+	 *  test01 sql会话工厂
+	 */
 	@Primary
 	@Bean(name = "testSqlSessionFactory")
 	public SqlSessionFactory testSqlSessionFactory(@Qualifier("testDataSource") DataSource dataSource)
@@ -58,6 +64,9 @@ public class TestMyBatisConfig1 {
 		return bean.getObject();
 	}
 
+	/*
+	 * 
+	 */
 	@Primary
 	@Bean(name = "testSqlSessionTemplate")
 	public SqlSessionTemplate testSqlSessionTemplate(

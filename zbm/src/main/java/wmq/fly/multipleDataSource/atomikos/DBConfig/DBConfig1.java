@@ -3,7 +3,7 @@ package wmq.fly.multipleDataSource.atomikos.DBConfig;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 //读取配置文件信息
-@ConfigurationProperties(prefix = "mysql.datasource.test01")
+@ConfigurationProperties(prefix = "mysql.datasource.test01")  //从application.yml文件中读取以mysql.datasource.test01开头的配置信息
 public class DBConfig1 {
 
 	private String url;

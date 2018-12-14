@@ -43,9 +43,10 @@ public class UserMulController {
 		return "success";
 	}
 	
+    //用于测试多数据源的事务
 	@RequestMapping("/addUser04")
 	public String addUser04(String name, Integer age) {
-		userService02.addUser023(name, age);
+		userService01.addUser04(name, age);
 		return "success";
 	}
 	

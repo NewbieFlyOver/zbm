@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: zbm
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: ￥ﾭﾦ￤ﾻﾥ￨ﾇﾴ￧ﾔﾨ
+Built-By: catfish
 Implementation-Vendor-Id: wmq.fly
-Build-Jdk: 1.8.0_102
+Build-Jdk: 1.8.0_111
 Implementation-URL: http://projects.spring.io/spring-boot/zbm/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

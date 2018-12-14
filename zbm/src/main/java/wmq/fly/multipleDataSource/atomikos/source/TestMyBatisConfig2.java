@@ -21,6 +21,7 @@ import wmq.fly.multipleDataSource.atomikos.DBConfig.DBConfig2;
 
 // basePackages 最好分开配置 如果放在同一个文件夹可能会报错
 @Configuration
+//wmq.fly.multipleDataSource.test02.dao下的的*mapper.java使用test02数据源
 @MapperScan(basePackages = "wmq.fly.multipleDataSource.test02.dao", sqlSessionTemplateRef = "test2SqlSessionTemplate")
 public class TestMyBatisConfig2 {
 
