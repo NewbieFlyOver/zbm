@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.scheduling.annotation.EnableAsync;
 import org.springframework.scheduling.annotation.EnableScheduling;
@@ -39,7 +40,7 @@ import wmq.fly.multipleDataSource.atomikos.DBConfig.DBConfig2;
 @SpringBootApplication//(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 @MapperScan(basePackages = "wmq.fly.mybatis.dao") //扫描*Mapper.java类
 //@EnableScheduling  //开启定时器
-//@EnableCaching //开启redis的缓存
+//@EnableCaching //开启缓存
 @EnableAsync  //开启异步执行
 //读取springboot多数据源事务atomikos配置的文件信息
 @EnableConfigurationProperties(value = { DBConfig1.class, DBConfig2.class }) 

@@ -182,6 +182,12 @@
 			<artifactId>spring-boot-starter-aop</artifactId>
 		</dependency>
 		
+		<!-- 引入ehcache依赖 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<finalName>SwaggerOfflineDoc</finalName>

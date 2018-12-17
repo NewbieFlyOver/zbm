@@ -54,7 +54,7 @@ public class UserMulController {
 		return "success";
 	}
 	
-	@RequestMapping("/addUser05")
+	@RequestMapping("/findByName")
 	public User findByName(String name) {
 		return userMapper01.findByName(name);
 	}
