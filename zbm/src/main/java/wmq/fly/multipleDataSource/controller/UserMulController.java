@@ -56,6 +56,7 @@ public class UserMulController {
 	
 	@RequestMapping("/findByName")
 	public User findByName(String name) {
+		System.out.println("9990");
 		return userMapper01.findByName(name);
 	}
 	

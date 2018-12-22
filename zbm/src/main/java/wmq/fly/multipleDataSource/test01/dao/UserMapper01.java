@@ -7,6 +7,10 @@ import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 
 import wmq.fly.multipleDataSource.entity.User;
+/**
+ * 使用ehcache缓存需要在启动类上添加@EnableCaching，用以开始缓存
+ *
+ */
 
 //@CacheConfig(cacheNames="BaseCache")
 public interface UserMapper01 {
